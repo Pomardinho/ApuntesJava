@@ -1,0 +1,426 @@
+= Conceptos básicos de Java
+:doctype: article
+:encoding: utf-8
+:lang: es
+:toc: left
+:toclevels: 3
+:sectnums:
+
+== Tipos primitivos
+Los tipos primitivos son aquellos que solo guardan un tipo de dato simple y se almacenan directamente en la memoria.
+
+[options="header", cols="3"]
+|===
+| Tipo
+| Valor
+| Tamaño (bits)
+
+| boolean
+| true, false
+| 1
+
+| char
+| Carácter unicode
+| 16
+
+| byte
+| Entero
+| 8
+
+| short
+| Entero
+| 16
+
+| int
+| Entero
+| 32
+
+| long
+| Entero
+| 64
+
+| float
+| Decimal
+| 32
+
+| double
+| Decimal
+| 64
+|===
+
+También existen clases complejas o _wrappers_ para algunos tipos primitivos:
+
+- Boolean
+- Character
+- Integer
+- Long
+- Float
+- Double
+
+== Declaración de variables
+Las variables pueden ser de cualquier tipo primitivo mencionado anteriormente, de sus clases complejas (wrappers), de clases propias de Java o de clases creadas por nosotros (objetos).
+
+Por ejemplo:
+
+- int n = 0;
+- Integer n = 0;
+- String frase = "Hello world!";
+- Scanner scanner = new Scanner(System.in);
+- Persona persona = new Persona(18, "John Doe");
+
+== Operadores
+Hay muchos tipos de operadores en Java y sirven para realizar cálculos y operaciones diversas.
+
+=== Operadores aritméticos
+
+[options="header", cols="4"]
+|===
+| Operador
+| Descripción
+| Ejemplo de uso
+| Resultado
+
+| +
+| Suma
+| 2 + 1
+| 3
+
+| -
+| Resta
+| 2 - 1
+| 1
+
+| *
+| Producto
+| 2 * 2
+| 4
+
+| /
+| Divide
+| 12 / 2
+| 6
+
+| %
+| Residuo
+| 12 % 2
+| 0
+
+| ++
+| Incrementa el valor en uno
+| 1++
+| 2
+
+| --
+| Decrementa el valor en uno
+| 2--
+| 1
+|===
+
+=== Operadores de asignación
+
+[options="header", cols="4"]
+|===
+| Operador
+| Descripción
+| Ejemplo de uso
+| Resultado
+
+| +=
+| Suma combinada
+| a += b
+| a = a + b
+
+| -=
+| Resta combinada
+| a -= b
+| a = a - b
+
+| *=
+| Producto combinado
+| a *= b
+| a = a * b
+
+| /=
+| División combinada
+| a /= b
+| a = a / b
+
+| %=
+| Residuo combinado
+| a %= b
+| a = a % b
+|===
+
+=== Operadores de comparación
+
+[options="header", cols="4"]
+|===
+| Operador
+| Descripción
+| Ejemplo de uso
+| Resultado
+
+| ==
+| Igual que
+| 7 == 8
+| false
+
+| !=
+| Diferente que
+| 7 != 8
+| true
+
+| <
+| Menor que
+| 11 < 19
+| true
+
+| >
+| Mayor que
+| 11 > 19
+| false
+
+| <=
+| Menor o igual que
+| 11 <= 19
+| true
+
+| >=
+| Mayor o igual que
+| 11 >= 19
+| false
+|===
+
+=== Operadores lógicos
+
+[options="header", cols="4"]
+|===
+| Operador
+| Descripción
+| Ejemplo de uso
+| Resultado
+
+| !
+| Negación (NOT)
+| !false
+| true
+
+| \|\|
+| Suma lógica (OR)
+| true \|\| false
+| true
+
+| &&
+| Producto lógico (AND)
+| false && true
+| false
+|===
+
+=== Operadores de bits
+[options="header", cols="4"]
+|===
+| Operador
+| Descripción
+| Ejemplo de uso
+| Resultado
+
+| ~
+| Negación (NOT)
+| ~2
+| -3
+
+| \|
+| Suma lógica (OR)
+| true \| false
+| true
+
+| &
+| Producto lógico (AND)
+| true & false
+| false
+
+| ^
+| Suma lógica exclusiva (XOR)
+| true ^ false
+| true
+
+| <<
+| Desplazamiento a la izquierda
+| 5 << 1
+| 10
+
+| >>
+| Desplazamiento a la derecha
+| 18 >> 1
+| 9
+
+| >>>
+| Desplazamiento a la derecha sin signo
+| -24 >>> 1
+| 2147483636
+|===
+
+== Clase String
+La clase String pertenece a Java y *NO* es un tipo primitivo, al contrario del o que muchos piensan. Se podría comparar a un array de _char_. Esta clase siempre se construye usando comillas dobles (""). Para introducir ciertos carácteres hace falta escribirlos de una manera especial, son los denominados _carácteres de escape_.
+
+[options="header", cols="2"]
+|===
+| Carácter de escape
+| Valor
+
+| \b
+| Retroceso
+
+| \t
+| Tabulación
+
+| \n
+| Nueva línea
+
+| \f
+| Avance de línea
+
+| \r
+| Retorno
+
+| \"
+| Comillas dobles
+
+| \'
+| Comillas simples
+
+| \\
+| Contrabarra
+
+| \uxxxx
+| Carácter unicode correspondiente al valor de xxxx
+|===
+
+== Bifurcaciones
+Las bifurcaciones se usan para ejecutar ciertas partes del código basandose en el resultado booleano de una comparación. Existen tres tipos.
+
+=== if-else
+La bifurcación if-else es la más común. Se usa una declaración _if_, se puede acompañar de tantas declaraciones _if else_ como sea necesario y se termina con una declaración _else_.
+
+Ejemplo de uso:
+[source, java, linenums]
+----
+public class Ejemplo {
+    public static void main(String[] args) {
+        int a = 4;
+        int b = 7;
+        int c = -2
+
+        if (a > b && a > c) {
+            System.out.println(a + " es el mayor");
+        } else if (b > c) {
+            System.out.println(b + " es el mayor");
+        } else {
+            System.out.println(c + " es el mayor");
+        }
+
+        // La salida de este programa es: "7 es el mayor"
+    }
+}
+----
+
+=== switch-case
+La bifurcación switch-case es muy parecida a la if-else pero puede resultar más útil en ciertos casos. De manera similar, se usa una declaración _switch_, se puede acompañar de tantas declaraciones _case_ como sea necesario, y se termina con una declaración _default_.
+
+Ejemplo de uso:
+[source, java, linenums]
+----
+public class Ejemplo {
+    public static void main(String[] args) {
+        int dia = 4;
+
+        switch (dia) {
+            case 1:
+                System.out.println("Lunes");
+            break;
+            case 2:
+                System.out.println("Martes");
+            break;
+            case 3:
+                System.out.println("Miércoles");
+            break;
+            case 4:
+                System.out.println("Jueves");
+            break;
+            case 5:
+                System.out.println("Viernes");
+            break;
+            case 6:
+                System.out.println("Sábado");
+            break;
+            case 7:
+                System.out.println("Domingo");
+            break;
+            default:
+                System.out.println("No existe este dia de la semana");
+        }
+
+        // La salida de este programa es: "Jueves"
+    }
+}
+----
+
+=== Operador ternario
+El operador ternario es una simplificación de la bifurcación if-else para poder escribir sentencias con dos casos posibles de forma rápida. Se usa una condición seguida de una interrogación (?) y luego dos valores separados por dos puntos (:). El primer valor será asignado en caso que la condición sea _true_ y el segundo valor será asignado en caso que la condición sea _false_.
+
+Ejemplo de uso:
+[source, java, linenums]
+----
+public class Ejemplo {
+    public static void main(String[] args) {
+        int n = 6;
+        int salida = (n % 2 == 0) ? n + " es par" : n + " es impar";
+        System.out.println(salida);
+
+        // La salida de este programa es: "n es par"
+    }
+}
+----
+
+== Bucles
+Los bucles se usan para poder ejecutar bloques de código repetidamente. Existen cuatro tipos.
+
+== for
+El bucle for es el más común. Se usa para repetir un bloque de código un número de veces definido. En el caso del siguiente ejemplo, cada iteración del bucle ejecutará el bloque de código e incrementará la variable _i_. Esto sucederá hasta que _i_ sea menor que 10.
+
+Ejemplo de uso:
+[source, java, linenums]
+----
+public class Ejemplo {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            System.out.print(i + " ");
+        }
+
+        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
+    }
+}
+----
+
+== for-each
+El bucle for-each es una variación del bucle for. Se introdujo porque son muchas las ocasiones en las que hay que recorrer arrays o listas. En el caso del siguiente ejemplo, cada iteración dará acceso a _n_. Esto sucederá hasta que se hayan recorrido todos los elementos del array.
+
+Ejemplo de uso:
+[source, java, linenums]
+----
+public class Ejemplo {
+    public static void main(String[] args) {
+        int [] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+        for (int n : numeros) {
+            System.out.print(n + " ");
+        }
+
+        // La salida de este programa es: "1 2 3 4 5 6 7 8 9 10"
+    }
+}
+----
+
+== while
+
+== do-while
