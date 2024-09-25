@@ -459,11 +459,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_operador_ternario">5.3. Operador ternario</a></li>
 </ul>
 </li>
-<li><a href="#_bucles">6. Bucles</a></li>
-<li><a href="#_for">7. For</a></li>
-<li><a href="#_for_each">8. For-each</a></li>
-<li><a href="#_while">9. While</a></li>
-<li><a href="#_do_while">10. Do-while</a></li>
+<li><a href="#_bucles">6. Bucles</a>
+<ul class="sectlevel2">
+<li><a href="#_for">6.1. For</a></li>
+<li><a href="#_for_each">6.2. For-each</a></li>
+<li><a href="#_while">6.3. While</a></li>
+<li><a href="#_do_while">6.4. Do-while</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1051,11 +1054,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Los bucles se usan para poder ejecutar bloques de código repetidamente. Existen cuatro tipos.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_for">7. For</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_for">6.1. For</h3>
 <div class="paragraph">
 <p>El bucle for es el más común. Se usa para repetir un bloque de código un número de veces definido. En el caso del siguiente ejemplo, cada iteración del bucle ejecutará el bloque de código e incrementará la variable <em>i</em>. Esto sucederá hasta que <em>i</em> sea menor que 10.</p>
 </div>
@@ -1076,10 +1076,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_for_each">8. For-each</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_for_each">6.2. For-each</h3>
 <div class="paragraph">
 <p>El bucle for-each es una variación del bucle for. Se introdujo porque son muchas las ocasiones en las que hay que recorrer arrays o listas. En el caso del siguiente ejemplo, cada iteración dará acceso a <em>n</em>. Esto sucederá hasta que se hayan recorrido todos los elementos del array.</p>
 </div>
@@ -1102,10 +1100,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_while">9. While</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_while">6.3. While</h3>
 <div class="paragraph">
 <p>Al contrario que los dos anteriores, el bucle while no depende de un numero definido de iteraciones, sino que depende de que una condición se cumpla. Por ello, el único parámetro que recibe es una expresión booleana. En el caso del siguiente ejemplo, el bucle se ejecutará hasta que <em>salir</em> sea true, es decir, hasta que el contador alcance un numero mayor que 10.</p>
 </div>
@@ -1132,10 +1128,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_do_while">10. Do-while</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_do_while">6.4. Do-while</h3>
 <div class="paragraph">
 <p>El bucle do-while es una variación del bucle while. En el caso del anterior bucle, si la variable <em>salir</em> es <em>true</em> antes de ejecutar el bucle, el bloque de código dentro de este no se ejecutará, puesto que la condición de salida ya es cierta. Aquí es donde encontramos la utilidad del bucle do-while. Si necesitamos que el bloque de código dentro del bucle se ejecute mínimo una vez, usaremos este bucle. En el caso del siguiente ejemplo, aunque la condición ya se cumple, el bucle se ejecutará una vez.</p>
 </div>
@@ -1189,9 +1183,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-09-25 19:22:48 +0200
+Last updated 2024-09-25 19:24:50 +0200
 </div>
 </div>
 </body>

@@ -391,7 +391,7 @@ public class Ejemplo {
 == Bucles
 Los bucles se usan para poder ejecutar bloques de código repetidamente. Existen cuatro tipos.
 
-== For
+=== For
 El bucle for es el más común. Se usa para repetir un bloque de código un número de veces definido. En el caso del siguiente ejemplo, cada iteración del bucle ejecutará el bloque de código e incrementará la variable _i_. Esto sucederá hasta que _i_ sea menor que 10.
 
 Ejemplo de uso:
@@ -408,7 +408,7 @@ public class Ejemplo {
 }
 ----
 
-== For-each
+=== For-each
 El bucle for-each es una variación del bucle for. Se introdujo porque son muchas las ocasiones en las que hay que recorrer arrays o listas. En el caso del siguiente ejemplo, cada iteración dará acceso a _n_. Esto sucederá hasta que se hayan recorrido todos los elementos del array.
 
 Ejemplo de uso:
@@ -427,7 +427,7 @@ public class Ejemplo {
 }
 ----
 
-== While
+=== While
 Al contrario que los dos anteriores, el bucle while no depende de un numero definido de iteraciones, sino que depende de que una condición se cumpla. Por ello, el único parámetro que recibe es una expresión booleana. En el caso del siguiente ejemplo, el bucle se ejecutará hasta que _salir_ sea true, es decir, hasta que el contador alcance un numero mayor que 10.
 
 Ejemplo de uso:
@@ -450,7 +450,7 @@ public class Ejemplo {
 }
 ----
 
-== Do-while
+=== Do-while
 El bucle do-while es una variación del bucle while. En el caso del anterior bucle, si la variable _salir_ es _true_ antes de ejecutar el bucle, el bloque de código dentro de este no se ejecutará, puesto que la condición de salida ya es cierta. Aquí es donde encontramos la utilidad del bucle do-while. Si necesitamos que el bloque de código dentro del bucle se ejecute mínimo una vez, usaremos este bucle. En el caso del siguiente ejemplo, aunque la condición ya se cumple, el bucle se ejecutará una vez.
 
 Ejemplo de uso:
