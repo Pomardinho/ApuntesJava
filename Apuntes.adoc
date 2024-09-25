@@ -305,11 +305,11 @@ La clase String pertenece a Java y *NO* es un tipo primitivo, al contrario del o
 == Bifurcaciones
 Las bifurcaciones se usan para ejecutar ciertas partes del código basandose en el resultado booleano de una comparación. Existen tres tipos.
 
-=== if-else
+=== If-else
 La bifurcación if-else es la más común. Se usa una declaración _if_, se puede acompañar de tantas declaraciones _if else_ como sea necesario y se termina con una declaración _else_.
 
 Ejemplo de uso:
-[source, java, linenums]
+[source, java]
 ----
 public class Ejemplo {
     public static void main(String[] args) {
@@ -330,11 +330,11 @@ public class Ejemplo {
 }
 ----
 
-=== switch-case
+=== Switch-case
 La bifurcación switch-case es muy parecida a la if-else pero puede resultar más útil en ciertos casos. De manera similar, se usa una declaración _switch_, se puede acompañar de tantas declaraciones _case_ como sea necesario, y se termina con una declaración _default_.
 
 Ejemplo de uso:
-[source, java, linenums]
+[source, java]
 ----
 public class Ejemplo {
     public static void main(String[] args) {
@@ -375,7 +375,7 @@ public class Ejemplo {
 El operador ternario es una simplificación de la bifurcación if-else para poder escribir sentencias con dos casos posibles de forma rápida. Se usa una condición seguida de una interrogación (?) y luego dos valores separados por dos puntos (:). El primer valor será asignado en caso que la condición sea _true_ y el segundo valor será asignado en caso que la condición sea _false_.
 
 Ejemplo de uso:
-[source, java, linenums]
+[source, java]
 ----
 public class Ejemplo {
     public static void main(String[] args) {
@@ -391,11 +391,11 @@ public class Ejemplo {
 == Bucles
 Los bucles se usan para poder ejecutar bloques de código repetidamente. Existen cuatro tipos.
 
-== for
+== For
 El bucle for es el más común. Se usa para repetir un bloque de código un número de veces definido. En el caso del siguiente ejemplo, cada iteración del bucle ejecutará el bloque de código e incrementará la variable _i_. Esto sucederá hasta que _i_ sea menor que 10.
 
 Ejemplo de uso:
-[source, java, linenums]
+[source, java]
 ----
 public class Ejemplo {
     public static void main(String[] args) {
@@ -408,11 +408,11 @@ public class Ejemplo {
 }
 ----
 
-== for-each
+== For-each
 El bucle for-each es una variación del bucle for. Se introdujo porque son muchas las ocasiones en las que hay que recorrer arrays o listas. En el caso del siguiente ejemplo, cada iteración dará acceso a _n_. Esto sucederá hasta que se hayan recorrido todos los elementos del array.
 
 Ejemplo de uso:
-[source, java, linenums]
+[source, java]
 ----
 public class Ejemplo {
     public static void main(String[] args) {
@@ -422,11 +422,75 @@ public class Ejemplo {
             System.out.print(n + " ");
         }
 
-        // La salida de este programa es: "1 2 3 4 5 6 7 8 9 10"
+        // La salida de este programa es: "1 2 3 4 5 6 7 8 9 10 "
     }
 }
 ----
 
-== while
+== While
+Al contrario que los dos anteriores, el bucle while no depende de un numero definido de iteraciones, sino que depende de que una condición se cumpla. Por ello, el único parámetro que recibe es una expresión booleana. En el caso del siguiente ejemplo, el bucle se ejecutará hasta que _salir_ sea true, es decir, hasta que el contador alcance un numero mayor que 10.
 
-== do-while
+Ejemplo de uso:
+[source, java]
+----
+public class Ejemplo {
+    public static void main(String[] args) {
+        boolean salir = false;
+        int contador = 0;
+        while (!salir) {
+            if (contador > 10) {
+                salir = true;
+            } else {
+                System.out.println(contador + " ");
+            }
+        }
+
+        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
+    }
+}
+----
+
+== Do-while
+El bucle do-while es una variación del bucle while. En el caso del anterior bucle, si la variable _salir_ es _true_ antes de ejecutar el bucle, el bloque de código dentro de este no se ejecutará, puesto que la condición de salida ya es cierta. Aquí es donde encontramos la utilidad del bucle do-while. Si necesitamos que el bloque de código dentro del bucle se ejecute mínimo una vez, usaremos este bucle. En el caso del siguiente ejemplo, aunque la condición ya se cumple, el bucle se ejecutará una vez.
+
+Ejemplo de uso:
+[source, java]
+----
+public class Ejemplo {
+    public static void main(String[] args) {
+        boolean salir = true;
+        int contador = 0;
+        do {
+            if (contador > 10) {
+                salir = true;
+            } else {
+                System.out.println(contador + " ");
+            }
+        } while (!salir);
+
+        // La salida de este programa es: "0 "
+    }
+}
+----
+
+En el caso del siguiente ejemplo, la condición no se cumple de primeras, así que el bucle seguirá su curso como si se tratara de cualquier otro bucle.
+
+Ejemplo de uso:
+[source, java]
+----
+public class Ejemplo {
+    public static void main(String[] args) {
+        boolean salir = false;
+        int contador = 0;
+        do {
+            if (contador > 10) {
+                salir = true;
+            } else {
+                System.out.println(contador + " ");
+            }
+        } while (!salir);
+
+        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
+    }
+}
+----

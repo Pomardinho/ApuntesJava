@@ -454,16 +454,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_clase_string">4. Clase String</a></li>
 <li><a href="#_bifurcaciones">5. Bifurcaciones</a>
 <ul class="sectlevel2">
-<li><a href="#_if_else">5.1. if-else</a></li>
-<li><a href="#_switch_case">5.2. switch-case</a></li>
+<li><a href="#_if_else">5.1. If-else</a></li>
+<li><a href="#_switch_case">5.2. Switch-case</a></li>
 <li><a href="#_operador_ternario">5.3. Operador ternario</a></li>
 </ul>
 </li>
 <li><a href="#_bucles">6. Bucles</a></li>
-<li><a href="#_for">7. for</a></li>
-<li><a href="#_for_each">8. for-each</a></li>
-<li><a href="#_while">9. while</a></li>
-<li><a href="#_do_while">10. do-while</a></li>
+<li><a href="#_for">7. For</a></li>
+<li><a href="#_for_each">8. For-each</a></li>
+<li><a href="#_while">9. While</a></li>
+<li><a href="#_do_while">10. Do-while</a></li>
 </ul>
 </div>
 </div>
@@ -946,7 +946,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Las bifurcaciones se usan para ejecutar ciertas partes del código basandose en el resultado booleano de una comparación. Existen tres tipos.</p>
 </div>
 <div class="sect2">
-<h3 id="_if_else">5.1. if-else</h3>
+<h3 id="_if_else">5.1. If-else</h3>
 <div class="paragraph">
 <p>La bifurcación if-else es la más común. Se usa una declaración <em>if</em>, se puede acompañar de tantas declaraciones <em>if else</em> como sea necesario y se termina con una declaración <em>else</em>.</p>
 </div>
@@ -976,7 +976,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_switch_case">5.2. switch-case</h3>
+<h3 id="_switch_case">5.2. Switch-case</h3>
 <div class="paragraph">
 <p>La bifurcación switch-case es muy parecida a la if-else pero puede resultar más útil en ciertos casos. De manera similar, se usa una declaración <em>switch</em>, se puede acompañar de tantas declaraciones <em>case</em> como sea necesario, y se termina con una declaración <em>default</em>.</p>
 </div>
@@ -1054,7 +1054,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_for">7. for</h2>
+<h2 id="_for">7. For</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>El bucle for es el más común. Se usa para repetir un bloque de código un número de veces definido. En el caso del siguiente ejemplo, cada iteración del bucle ejecutará el bloque de código e incrementará la variable <em>i</em>. Esto sucederá hasta que <em>i</em> sea menor que 10.</p>
@@ -1078,7 +1078,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_for_each">8. for-each</h2>
+<h2 id="_for_each">8. For-each</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>El bucle for-each es una variación del bucle for. Se introdujo porque son muchas las ocasiones en las que hay que recorrer arrays o listas. En el caso del siguiente ejemplo, cada iteración dará acceso a <em>n</em>. Esto sucederá hasta que se hayan recorrido todos los elementos del array.</p>
@@ -1096,7 +1096,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
             System.out.print(n + " ");
         }
 
-        // La salida de este programa es: "1 2 3 4 5 6 7 8 9 10"
+        // La salida de este programa es: "1 2 3 4 5 6 7 8 9 10 "
     }
 }</code></pre>
 </div>
@@ -1104,21 +1104,94 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_while">9. while</h2>
+<h2 id="_while">9. While</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Al contrario que los dos anteriores, el bucle while no depende de un numero definido de iteraciones, sino que depende de que una condición se cumpla. Por ello, el único parámetro que recibe es una expresión booleana. En el caso del siguiente ejemplo, el bucle se ejecutará hasta que <em>salir</em> sea true, es decir, hasta que el contador alcance un numero mayor que 10.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
+    public static void main(String[] args) {
+        boolean salir = false;
+        int contador = 0;
+        while (!salir) {
+            if (contador &gt; 10) {
+                salir = true;
+            } else {
+                System.out.println(contador + " ");
+            }
+        }
 
+        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_do_while">10. do-while</h2>
+<h2 id="_do_while">10. Do-while</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>El bucle do-while es una variación del bucle while. En el caso del anterior bucle, si la variable <em>salir</em> es <em>true</em> antes de ejecutar el bucle, el bloque de código dentro de este no se ejecutará, puesto que la condición de salida ya es cierta. Aquí es donde encontramos la utilidad del bucle do-while. Si necesitamos que el bloque de código dentro del bucle se ejecute mínimo una vez, usaremos este bucle. En el caso del siguiente ejemplo, aunque la condición ya se cumple, el bucle se ejecutará una vez.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
+    public static void main(String[] args) {
+        boolean salir = true;
+        int contador = 0;
+        do {
+            if (contador &gt; 10) {
+                salir = true;
+            } else {
+                System.out.println(contador + " ");
+            }
+        } while (!salir);
 
+        // La salida de este programa es: "0 "
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>En el caso del siguiente ejemplo, la condición no se cumple de primeras, así que el bucle seguirá su curso como si se tratara de cualquier otro bucle.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
+    public static void main(String[] args) {
+        boolean salir = false;
+        int contador = 0;
+        do {
+            if (contador &gt; 10) {
+                salir = true;
+            } else {
+                System.out.println(contador + " ");
+            }
+        } while (!salir);
+
+        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-09-25 08:04:51 +0200
+Last updated 2024-09-25 19:22:48 +0200
 </div>
 </div>
 </body>
