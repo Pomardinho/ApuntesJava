@@ -68,6 +68,12 @@ Por ejemplo:
 - Scanner scanner = new Scanner(System.in);
 - Persona persona = new Persona(18, "John Doe");
 
+En el caso de querer instanciar una variable cuyo valor no cambiará nunca, lo haremos con la palabra _final_. Además, es conveniente escribir el nombre de la variable en mayúsculas para diferenciarla mejor.
+
+Por ejemplo:
+
+- final int MAXIMO = 10;
+
 == Operadores
 Hay muchos tipos de operadores en Java y sirven para realizar cálculos y operaciones diversas.
 
