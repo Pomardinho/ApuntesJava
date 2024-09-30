@@ -451,20 +451,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_operadores_de_bits">3.5. Operadores de bits</a></li>
 </ul>
 </li>
-<li><a href="#_clase_string">4. Clase String</a></li>
-<li><a href="#_bifurcaciones">5. Bifurcaciones</a>
+<li><a href="#_bifurcaciones">4. Bifurcaciones</a>
 <ul class="sectlevel2">
-<li><a href="#_if_else">5.1. If-else</a></li>
-<li><a href="#_switch_case">5.2. Switch-case</a></li>
-<li><a href="#_operador_ternario">5.3. Operador ternario</a></li>
+<li><a href="#_if_else">4.1. If-else</a></li>
+<li><a href="#_switch_case">4.2. Switch-case</a></li>
+<li><a href="#_operador_ternario">4.3. Operador ternario</a></li>
 </ul>
 </li>
-<li><a href="#_bucles">6. Bucles</a>
+<li><a href="#_bucles">5. Bucles</a>
 <ul class="sectlevel2">
-<li><a href="#_for">6.1. For</a></li>
-<li><a href="#_for_each">6.2. For-each</a></li>
-<li><a href="#_while">6.3. While</a></li>
-<li><a href="#_do_while">6.4. Do-while</a></li>
+<li><a href="#_for">5.1. For</a></li>
+<li><a href="#_for_each">5.2. For-each</a></li>
+<li><a href="#_while">5.3. While</a></li>
+<li><a href="#_do_while">5.4. Do-while</a></li>
+</ul>
+</li>
+<li><a href="#_clase_string">6. Clase String</a>
+<ul class="sectlevel2">
+<li><a href="#_métodos_más_comunes">6.1. Métodos más comunes</a></li>
 </ul>
 </li>
 </ul>
@@ -885,7 +889,248 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_clase_string">4. Clase String</h2>
+<h2 id="_bifurcaciones">4. Bifurcaciones</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Las bifurcaciones se usan para ejecutar ciertas partes del código basandose en el resultado booleano de una comparación. Existen tres tipos.</p>
+</div>
+<div class="sect2">
+<h3 id="_if_else">4.1. If-else</h3>
+<div class="paragraph">
+<p>La bifurcación if-else es la más común. Se usa una declaración <em>if</em>, se puede acompañar de tantas declaraciones <em>if else</em> como sea necesario y se termina con una declaración <em>else</em>.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
+    public static void main(String[] args) {
+        int a = 4;
+        int b = 7;
+        int c = -2
+
+        if (a &gt; b &amp;&amp; a &gt; c) {
+            System.out.println(a + " es el mayor");
+        } else if (b &gt; c) {
+            System.out.println(b + " es el mayor");
+        } else {
+            System.out.println(c + " es el mayor");
+        }
+
+        // La salida de este programa es: "7 es el mayor"
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_switch_case">4.2. Switch-case</h3>
+<div class="paragraph">
+<p>La bifurcación switch-case es muy parecida a la if-else pero puede resultar más útil en ciertos casos. De manera similar, se usa una declaración <em>switch</em>, se puede acompañar de tantas declaraciones <em>case</em> como sea necesario, y se termina con una declaración <em>default</em>.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
+    public static void main(String[] args) {
+        int dia = 4;
+
+        switch (dia) {
+            case 1:
+                System.out.println("Lunes");
+            break;
+            case 2:
+                System.out.println("Martes");
+            break;
+            case 3:
+                System.out.println("Miércoles");
+            break;
+            case 4:
+                System.out.println("Jueves");
+            break;
+            case 5:
+                System.out.println("Viernes");
+            break;
+            case 6:
+                System.out.println("Sábado");
+            break;
+            case 7:
+                System.out.println("Domingo");
+            break;
+            default:
+                System.out.println("No existe este dia de la semana");
+        }
+
+        // La salida de este programa es: "Jueves"
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_operador_ternario">4.3. Operador ternario</h3>
+<div class="paragraph">
+<p>El operador ternario es una simplificación de la bifurcación if-else para poder escribir sentencias con dos casos posibles de forma rápida. Se usa una condición seguida de una interrogación (?) y luego dos valores separados por dos puntos (:). El primer valor será asignado en caso que la condición sea <em>true</em> y el segundo valor será asignado en caso que la condición sea <em>false</em>.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
+    public static void main(String[] args) {
+        int n = 6;
+        int salida = (n % 2 == 0) ? n + " es par" : n + " es impar";
+        System.out.println(salida);
+
+        // La salida de este programa es: "n es par"
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bucles">5. Bucles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Los bucles se usan para poder ejecutar bloques de código repetidamente. Existen cuatro tipos.</p>
+</div>
+<div class="sect2">
+<h3 id="_for">5.1. For</h3>
+<div class="paragraph">
+<p>El bucle for es el más común. Se usa para repetir un bloque de código un número de veces definido. En el caso del siguiente ejemplo, cada iteración del bucle ejecutará el bloque de código e incrementará la variable <em>i</em>. Esto sucederá hasta que <em>i</em> sea menor que 10.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
+    public static void main(String[] args) {
+        for (int i = 0; i &lt; 10; i++) {
+            System.out.print(i + " ");
+        }
+
+        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_each">5.2. For-each</h3>
+<div class="paragraph">
+<p>El bucle for-each es una variación del bucle for. Se introdujo porque son muchas las ocasiones en las que hay que recorrer arrays o listas. En el caso del siguiente ejemplo, cada iteración dará acceso a <em>n</em>. Esto sucederá hasta que se hayan recorrido todos los elementos del array.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
+    public static void main(String[] args) {
+        int [] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+        for (int n : numeros) {
+            System.out.print(n + " ");
+        }
+
+        // La salida de este programa es: "1 2 3 4 5 6 7 8 9 10 "
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_while">5.3. While</h3>
+<div class="paragraph">
+<p>Al contrario que los dos anteriores, el bucle while no depende de un numero definido de iteraciones, sino que depende de que una condición se cumpla. Por ello, el único parámetro que recibe es una expresión booleana. En el caso del siguiente ejemplo, el bucle se ejecutará hasta que <em>salir</em> sea true, es decir, hasta que el contador alcance un numero mayor que 10.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
+    public static void main(String[] args) {
+        boolean salir = false;
+        int contador = 0;
+        while (!salir) {
+            if (contador &gt; 10) {
+                salir = true;
+            } else {
+                System.out.println(contador + " ");
+            }
+        }
+
+        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_do_while">5.4. Do-while</h3>
+<div class="paragraph">
+<p>El bucle do-while es una variación del bucle while. En el caso del anterior bucle, si la variable <em>salir</em> es <em>true</em> antes de ejecutar el bucle, el bloque de código dentro de este no se ejecutará, puesto que la condición de salida ya es cierta. Aquí es donde encontramos la utilidad del bucle do-while. Si necesitamos que el bloque de código dentro del bucle se ejecute mínimo una vez, usaremos este bucle. En el caso del siguiente ejemplo, aunque la condición ya se cumple, el bucle se ejecutará una vez.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
+    public static void main(String[] args) {
+        boolean salir = true;
+        int contador = 0;
+        do {
+            if (contador &gt; 10) {
+                salir = true;
+            } else {
+                System.out.println(contador + " ");
+            }
+        } while (!salir);
+
+        // La salida de este programa es: "0 "
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>En el caso del siguiente ejemplo, la condición no se cumple de primeras, así que el bucle seguirá su curso como si se tratara de cualquier otro bucle.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
+    public static void main(String[] args) {
+        boolean salir = false;
+        int contador = 0;
+        do {
+            if (contador &gt; 10) {
+                salir = true;
+            } else {
+                System.out.println(contador + " ");
+            }
+        } while (!salir);
+
+        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_clase_string">6. Clase String</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>La clase String pertenece a Java y <strong>NO</strong> es un tipo primitivo, al contrario del o que muchos piensan. Se podría comparar a un array de <em>char</em>. Esta clase siempre se construye usando comillas dobles (""). Para introducir ciertos carácteres hace falta escribirlos de una manera especial, son los denominados <em>carácteres de escape</em>.</p>
@@ -940,253 +1185,156 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_bifurcaciones">5. Bifurcaciones</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Las bifurcaciones se usan para ejecutar ciertas partes del código basandose en el resultado booleano de una comparación. Existen tres tipos.</p>
-</div>
 <div class="sect2">
-<h3 id="_if_else">5.1. If-else</h3>
+<h3 id="_métodos_más_comunes">6.1. Métodos más comunes</h3>
 <div class="paragraph">
-<p>La bifurcación if-else es la más común. Se usa una declaración <em>if</em>, se puede acompañar de tantas declaraciones <em>if else</em> como sea necesario y se termina con una declaración <em>else</em>.</p>
+<p>Como todas las clases, la clase String viene con un montón de métodos que nos facilitan algunas tareas. Estos son algunos de los más comunes y útiles.</p>
 </div>
-<div class="paragraph">
-<p>Ejemplo de uso:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        int a = 4;
-        int b = 7;
-        int c = -2
-
-        if (a &gt; b &amp;&amp; a &gt; c) {
-            System.out.println(a + " es el mayor");
-        } else if (b &gt; c) {
-            System.out.println(b + " es el mayor");
-        } else {
-            System.out.println(c + " es el mayor");
-        }
-
-        // La salida de este programa es: "7 es el mayor"
-    }
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_switch_case">5.2. Switch-case</h3>
-<div class="paragraph">
-<p>La bifurcación switch-case es muy parecida a la if-else pero puede resultar más útil en ciertos casos. De manera similar, se usa una declaración <em>switch</em>, se puede acompañar de tantas declaraciones <em>case</em> como sea necesario, y se termina con una declaración <em>default</em>.</p>
-</div>
-<div class="paragraph">
-<p>Ejemplo de uso:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        int dia = 4;
-
-        switch (dia) {
-            case 1:
-                System.out.println("Lunes");
-            break;
-            case 2:
-                System.out.println("Martes");
-            break;
-            case 3:
-                System.out.println("Miércoles");
-            break;
-            case 4:
-                System.out.println("Jueves");
-            break;
-            case 5:
-                System.out.println("Viernes");
-            break;
-            case 6:
-                System.out.println("Sábado");
-            break;
-            case 7:
-                System.out.println("Domingo");
-            break;
-            default:
-                System.out.println("No existe este dia de la semana");
-        }
-
-        // La salida de este programa es: "Jueves"
-    }
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_operador_ternario">5.3. Operador ternario</h3>
-<div class="paragraph">
-<p>El operador ternario es una simplificación de la bifurcación if-else para poder escribir sentencias con dos casos posibles de forma rápida. Se usa una condición seguida de una interrogación (?) y luego dos valores separados por dos puntos (:). El primer valor será asignado en caso que la condición sea <em>true</em> y el segundo valor será asignado en caso que la condición sea <em>false</em>.</p>
-</div>
-<div class="paragraph">
-<p>Ejemplo de uso:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        int n = 6;
-        int salida = (n % 2 == 0) ? n + " es par" : n + " es impar";
-        System.out.println(salida);
-
-        // La salida de este programa es: "n es par"
-    }
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_bucles">6. Bucles</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Los bucles se usan para poder ejecutar bloques de código repetidamente. Existen cuatro tipos.</p>
-</div>
-<div class="sect2">
-<h3 id="_for">6.1. For</h3>
-<div class="paragraph">
-<p>El bucle for es el más común. Se usa para repetir un bloque de código un número de veces definido. En el caso del siguiente ejemplo, cada iteración del bucle ejecutará el bloque de código e incrementará la variable <em>i</em>. Esto sucederá hasta que <em>i</em> sea menor que 10.</p>
-</div>
-<div class="paragraph">
-<p>Ejemplo de uso:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        for (int i = 0; i &lt; 10; i++) {
-            System.out.print(i + " ");
-        }
-
-        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
-    }
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_for_each">6.2. For-each</h3>
-<div class="paragraph">
-<p>El bucle for-each es una variación del bucle for. Se introdujo porque son muchas las ocasiones en las que hay que recorrer arrays o listas. En el caso del siguiente ejemplo, cada iteración dará acceso a <em>n</em>. Esto sucederá hasta que se hayan recorrido todos los elementos del array.</p>
-</div>
-<div class="paragraph">
-<p>Ejemplo de uso:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        int [] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-
-        for (int n : numeros) {
-            System.out.print(n + " ");
-        }
-
-        // La salida de este programa es: "1 2 3 4 5 6 7 8 9 10 "
-    }
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_while">6.3. While</h3>
-<div class="paragraph">
-<p>Al contrario que los dos anteriores, el bucle while no depende de un numero definido de iteraciones, sino que depende de que una condición se cumpla. Por ello, el único parámetro que recibe es una expresión booleana. En el caso del siguiente ejemplo, el bucle se ejecutará hasta que <em>salir</em> sea true, es decir, hasta que el contador alcance un numero mayor que 10.</p>
-</div>
-<div class="paragraph">
-<p>Ejemplo de uso:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        boolean salir = false;
-        int contador = 0;
-        while (!salir) {
-            if (contador &gt; 10) {
-                salir = true;
-            } else {
-                System.out.println(contador + " ");
-            }
-        }
-
-        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
-    }
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_do_while">6.4. Do-while</h3>
-<div class="paragraph">
-<p>El bucle do-while es una variación del bucle while. En el caso del anterior bucle, si la variable <em>salir</em> es <em>true</em> antes de ejecutar el bucle, el bloque de código dentro de este no se ejecutará, puesto que la condición de salida ya es cierta. Aquí es donde encontramos la utilidad del bucle do-while. Si necesitamos que el bloque de código dentro del bucle se ejecute mínimo una vez, usaremos este bucle. En el caso del siguiente ejemplo, aunque la condición ya se cumple, el bucle se ejecutará una vez.</p>
-</div>
-<div class="paragraph">
-<p>Ejemplo de uso:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        boolean salir = true;
-        int contador = 0;
-        do {
-            if (contador &gt; 10) {
-                salir = true;
-            } else {
-                System.out.println(contador + " ");
-            }
-        } while (!salir);
-
-        // La salida de este programa es: "0 "
-    }
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>En el caso del siguiente ejemplo, la condición no se cumple de primeras, así que el bucle seguirá su curso como si se tratara de cualquier otro bucle.</p>
-</div>
-<div class="paragraph">
-<p>Ejemplo de uso:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        boolean salir = false;
-        int contador = 0;
-        do {
-            if (contador &gt; 10) {
-                salir = true;
-            } else {
-                System.out.println(contador + " ");
-            }
-        } while (!salir);
-
-        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
-    }
-}</code></pre>
-</div>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Método</th>
+<th class="tableblock halign-left valign-top">Descripción</th>
+<th class="tableblock halign-left valign-top">Ejemplo de uso</th>
+<th class="tableblock halign-left valign-top">Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">charAt(int index)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Devuelve el cáracter del String ubicado en el índice especificado</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".charAt(3)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'m'</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">compareTo(String anotherString)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compara dos Strings por carácteres (lexicográficamente)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".compareTo("Ejemplo")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">compareToIgnoreCase(String anotherString)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compara dos Strings por carácteres (lexicográficamente) ignorando las mayúsculas y minúsculas</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".compareToIgnoreCase("ejemplo")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contains(CharSequence s)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comprueba si el String contiene la secuencia especificada.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".contains("os")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">endsWith(String suffix)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comprueba si el String termina con el sufijo especificado.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".endsWith("lo")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">equals(Object object)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comprueba si el String es igual al objeto especificado (normalmente otro String)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".equals("ejemplo")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">equalsIgnoreCase(String anotherString)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comprueba si el String es igual que otro String ignorando las mayúsculas y minúsculas</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".equalsIgnoreCase("ejemplo")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">indexOf(String str, int fromIndex)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Devuelve el índice dentro del String de la primera coincidencia con el substring especificado. Si no se define fromIndex, este será el inicio del String.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".indexOf("mp")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">isBlank()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comprueba si el String está vacio o solo contiene espacios</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">" ".isBlank()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">isEmpty()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comprueba si el String tiene una longitud de 0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">" ".isEmpty()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lastIndexOf(String str, int fromIndex)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Devuelve el índice dentro del String de la última coincidencia con el substring especificado. Si no se define fromIndex, este será el inicio del String.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".lastIndexOf("e")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">length()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Devuelve la longitud del String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".length()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">repeat(int count)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Devuelve un String con su valor concatenado el número de veces especificado</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".repeat(3)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"EjemploEjemploEjemplo"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">replace(CharSequence target, CharSequence replacement)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reemplaza en el String cada substring que coincida con el especificado (target) por el reemplazo (replacement)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"ejemplo".replace("e", "2")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"2j2mplo"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">startsWith(String prefix)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comprueba si el String empieza con el prefijo especificado.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".startsWith("Ej")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">substring(int beginIndex, int endIndex)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Devuelve un String dentro del String entre el punto de inicio y final. Si no se define endIndex, este será el final de String.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".substring(2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"emplo"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toCharArray()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convierte el String en un array de carácteres</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".toCharArray()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">['E', 'j', 'e', 'm', 'p', 'l', 'o']</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toLowerCase()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convierte el String a todo minúsculas</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".toLowerCase()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"ejemplo"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toUpperCase()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convierte el String a todo mayúsculas</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo".toUpperCase()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"EJEMPLO"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">trim()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Devuelve el String eliminando los espacios del incio y del final</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"  Ejemplo ".trim()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Ejemplo"</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-09-25 19:24:50 +0200
+Last updated 2024-09-30 19:12:47 +0200
 </div>
 </div>
 </body>

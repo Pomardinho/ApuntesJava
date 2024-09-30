@@ -266,42 +266,6 @@ Hay muchos tipos de operadores en Java y sirven para realizar cálculos y operac
 | 2147483636
 |===
 
-== Clase String
-La clase String pertenece a Java y *NO* es un tipo primitivo, al contrario del o que muchos piensan. Se podría comparar a un array de _char_. Esta clase siempre se construye usando comillas dobles (""). Para introducir ciertos carácteres hace falta escribirlos de una manera especial, son los denominados _carácteres de escape_.
-
-[options="header", cols="2"]
-|===
-| Carácter de escape
-| Valor
-
-| \b
-| Retroceso
-
-| \t
-| Tabulación
-
-| \n
-| Nueva línea
-
-| \f
-| Avance de línea
-
-| \r
-| Retorno
-
-| \"
-| Comillas dobles
-
-| \'
-| Comillas simples
-
-| \\
-| Contrabarra
-
-| \uxxxx
-| Carácter unicode correspondiente al valor de xxxx
-|===
-
 == Bifurcaciones
 Las bifurcaciones se usan para ejecutar ciertas partes del código basandose en el resultado booleano de una comparación. Existen tres tipos.
 
@@ -494,3 +458,150 @@ public class Ejemplo {
     }
 }
 ----
+
+== Clase String
+La clase String pertenece a Java y *NO* es un tipo primitivo, al contrario del o que muchos piensan. Se podría comparar a un array de _char_. Esta clase siempre se construye usando comillas dobles (""). Para introducir ciertos carácteres hace falta escribirlos de una manera especial, son los denominados _carácteres de escape_.
+
+[options="header", cols="2"]
+|===
+| Carácter de escape
+| Valor
+
+| \b
+| Retroceso
+
+| \t
+| Tabulación
+
+| \n
+| Nueva línea
+
+| \f
+| Avance de línea
+
+| \r
+| Retorno
+
+| \"
+| Comillas dobles
+
+| \'
+| Comillas simples
+
+| \\
+| Contrabarra
+
+| \uxxxx
+| Carácter unicode correspondiente al valor de xxxx
+|===
+
+=== Métodos más comunes
+Como todas las clases, la clase String viene con un montón de métodos que nos facilitan algunas tareas. Estos son algunos de los más comunes y útiles.
+
+[options="header", cols="4"]
+|===
+| Método
+| Descripción
+| Ejemplo de uso
+| Resultado
+
+| charAt(int index)
+| Devuelve el cáracter del String ubicado en el índice especificado
+| "Ejemplo".charAt(3)
+| 'm'
+
+| compareTo(String anotherString)
+| Compara dos Strings por carácteres (lexicográficamente)
+| "Ejemplo".compareTo("Ejemplo")
+| 0
+
+| compareToIgnoreCase(String anotherString)
+| Compara dos Strings por carácteres (lexicográficamente) ignorando las mayúsculas y minúsculas
+| "Ejemplo".compareToIgnoreCase("ejemplo")
+| 0
+
+| contains(CharSequence s)
+| Comprueba si el String contiene la secuencia especificada.
+| "Ejemplo".contains("os")
+| false
+
+| endsWith(String suffix)
+| Comprueba si el String termina con el sufijo especificado.
+| "Ejemplo".endsWith("lo")
+| true
+
+| equals(Object object)
+| Comprueba si el String es igual al objeto especificado (normalmente otro String)
+| "Ejemplo".equals("ejemplo")
+| false
+
+| equalsIgnoreCase(String anotherString)
+| Comprueba si el String es igual que otro String ignorando las mayúsculas y minúsculas
+| "Ejemplo".equalsIgnoreCase("ejemplo")
+| true
+
+| indexOf(String str, int fromIndex)
+| Devuelve el índice dentro del String de la primera coincidencia con el substring especificado. Si no se define fromIndex, este será el inicio del String.
+| "Ejemplo".indexOf("mp")
+| 3
+
+| isBlank()
+| Comprueba si el String está vacio o solo contiene espacios
+| " ".isBlank()
+| true
+
+| isEmpty()
+| Comprueba si el String tiene una longitud de 0
+| " ".isEmpty()
+| false
+
+| lastIndexOf(String str, int fromIndex)
+| Devuelve el índice dentro del String de la última coincidencia con el substring especificado. Si no se define fromIndex, este será el inicio del String.
+| "Ejemplo".lastIndexOf("e")
+| 2
+
+| length()
+| Devuelve la longitud del String
+| "Ejemplo".length()
+| 7
+
+| repeat(int count)
+| Devuelve un String con su valor concatenado el número de veces especificado
+| "Ejemplo".repeat(3)
+| "EjemploEjemploEjemplo" 
+
+| replace(CharSequence target, CharSequence replacement)
+| Reemplaza en el String cada substring que coincida con el especificado (target) por el reemplazo (replacement)
+| "ejemplo".replace("e", "2")
+| "2j2mplo"
+
+| startsWith(String prefix)
+| Comprueba si el String empieza con el prefijo especificado.
+| "Ejemplo".startsWith("Ej")
+| true
+
+| substring(int beginIndex, int endIndex)
+| Devuelve un String dentro del String entre el punto de inicio y final. Si no se define endIndex, este será el final de String.
+| "Ejemplo".substring(2)
+| "emplo"
+
+| toCharArray()
+| Convierte el String en un array de carácteres
+| "Ejemplo".toCharArray()
+| ['E', 'j', 'e', 'm', 'p', 'l', 'o']
+
+| toLowerCase()
+| Convierte el String a todo minúsculas
+| "Ejemplo".toLowerCase()
+| "ejemplo"
+
+| toUpperCase()
+| Convierte el String a todo mayúsculas
+| "Ejemplo".toUpperCase()
+| "EJEMPLO"
+
+| trim()
+| Devuelve el String eliminando los espacios del incio y del final
+| "  Ejemplo ".trim()
+| "Ejemplo"
+|===
