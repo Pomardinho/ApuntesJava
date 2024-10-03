@@ -471,6 +471,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_métodos_más_comunes">6.1. Métodos más comunes</a></li>
 </ul>
 </li>
+<li><a href="#_excepciones">7. Excepciones</a>
+<ul class="sectlevel2">
+<li><a href="#_throws">7.1. Throws</a></li>
+<li><a href="#_try_catch">7.2. Try-catch</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -904,22 +910,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        int a = 4;
-        int b = 7;
-        int c = -2
+<pre class="highlight"><code class="language-java" data-lang="java">int a = 4;
+int b = 7;
+int c = -2
 
-        if (a &gt; b &amp;&amp; a &gt; c) {
-            System.out.println(a + " es el mayor");
-        } else if (b &gt; c) {
-            System.out.println(b + " es el mayor");
-        } else {
-            System.out.println(c + " es el mayor");
-        }
-
-        // La salida de este programa es: "7 es el mayor"
-    }
+if (a &gt; b &amp;&amp; a &gt; c) {
+    System.out.println(a + " es el mayor");
+} else if (b &gt; c) {
+    System.out.println(b + " es el mayor");
+} else {
+    System.out.println(c + " es el mayor");
 }</code></pre>
 </div>
 </div>
@@ -934,38 +934,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        int dia = 4;
-
-        switch (dia) {
-            case 1:
-                System.out.println("Lunes");
-            break;
-            case 2:
-                System.out.println("Martes");
-            break;
-            case 3:
-                System.out.println("Miércoles");
-            break;
-            case 4:
-                System.out.println("Jueves");
-            break;
-            case 5:
-                System.out.println("Viernes");
-            break;
-            case 6:
-                System.out.println("Sábado");
-            break;
-            case 7:
-                System.out.println("Domingo");
-            break;
-            default:
-                System.out.println("No existe este dia de la semana");
-        }
-
-        // La salida de este programa es: "Jueves"
-    }
+<pre class="highlight"><code class="language-java" data-lang="java">int dia = 4;
+switch (dia) {
+    case 1:
+        System.out.println("Lunes");
+    break;
+    case 2:
+        System.out.println("Martes");
+    break;
+    case 3:
+        System.out.println("Miércoles");
+    break;
+    case 4:
+        System.out.println("Jueves");
+    break;
+    case 5:
+        System.out.println("Viernes");
+    break;
+    case 6:
+        System.out.println("Sábado");
+    break;
+    case 7:
+        System.out.println("Domingo");
+    break;
+    default:
+        System.out.println("No existe este dia de la semana");
 }</code></pre>
 </div>
 </div>
@@ -980,15 +973,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        int n = 6;
-        int salida = (n % 2 == 0) ? n + " es par" : n + " es impar";
-        System.out.println(salida);
-
-        // La salida de este programa es: "n es par"
-    }
-}</code></pre>
+<pre class="highlight"><code class="language-java" data-lang="java">int n = 6;
+int salida = (n % 2 == 0) ? n + " es par" : n + " es impar";
+System.out.println(salida);</code></pre>
 </div>
 </div>
 </div>
@@ -1010,14 +997,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        for (int i = 0; i &lt; 10; i++) {
-            System.out.print(i + " ");
-        }
-
-        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
-    }
+<pre class="highlight"><code class="language-java" data-lang="java">for (int i = 0; i &lt; 10; i++) {
+    System.out.print(i + " ");
 }</code></pre>
 </div>
 </div>
@@ -1032,16 +1013,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        int [] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-
-        for (int n : numeros) {
-            System.out.print(n + " ");
-        }
-
-        // La salida de este programa es: "1 2 3 4 5 6 7 8 9 10 "
-    }
+<pre class="highlight"><code class="language-java" data-lang="java">for (int n : numeros) {
+    System.out.print(n + " ");
 }</code></pre>
 </div>
 </div>
@@ -1056,19 +1029,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        boolean salir = false;
-        int contador = 0;
-        while (!salir) {
-            if (contador &gt; 10) {
-                salir = true;
-            } else {
-                System.out.println(contador + " ");
-            }
-        }
-
-        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
+<pre class="highlight"><code class="language-java" data-lang="java">boolean salir = false;
+int contador = 0;
+while (!salir) {
+    if (contador &gt; 10) {
+        salir = true;
+    } else {
+        System.out.println(contador + " ");
     }
 }</code></pre>
 </div>
@@ -1084,21 +1051,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        boolean salir = true;
-        int contador = 0;
-        do {
-            if (contador &gt; 10) {
-                salir = true;
-            } else {
-                System.out.println(contador + " ");
-            }
-        } while (!salir);
-
-        // La salida de este programa es: "0 "
+<pre class="highlight"><code class="language-java" data-lang="java">boolean salir = true;
+int contador = 0;
+do {
+    if (contador &gt; 10) {
+        salir = true;
+    } else {
+        System.out.println(contador + " ");
     }
-}</code></pre>
+} while (!salir);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1109,21 +1070,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class Ejemplo {
-    public static void main(String[] args) {
-        boolean salir = false;
-        int contador = 0;
-        do {
-            if (contador &gt; 10) {
-                salir = true;
-            } else {
-                System.out.println(contador + " ");
-            }
-        } while (!salir);
-
-        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
+<pre class="highlight"><code class="language-java" data-lang="java">boolean salir = false;
+int contador = 0;
+do {
+    if (contador &gt; 10) {
+        salir = true;
+    } else {
+        System.out.println(contador + " ");
     }
-}</code></pre>
+} while (!salir);</code></pre>
 </div>
 </div>
 </div>
@@ -1331,10 +1286,207 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_excepciones">7. Excepciones</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Una excepción es la manera como Java nos avisa que ha habido un error durante la ejecución del programa, y se dividen en tres tipos distintos. Las excepciones <em>checked</em> son comprobadas en tiempo de compilación y, por lo tanto, el compilador obliga a controlarlas con una cláusula <em>trhows</em> o un bloque try-catch. Por el contrario, las excepciones <em>unchecked</em> son las que no se comprueban en tiempo de compilación, por lo que no es obligatorio controlarlas. Por último, las excepciones <em>fatal</em> son aquellas que causan que el programa se detenga completamente, sugiriendo que alguna parte del código es incorrecta y debe ser corregida de immediato. Estas son algunas de las excepciones más comunes.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Nombre</th>
+<th class="tableblock halign-left valign-top">Tipo</th>
+<th class="tableblock halign-left valign-top">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ArithmeticException</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unchecked</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Operación aritmética excepcional, por ejemplo división por cero.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ClassCastException</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unchecked</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Una conversión (cast) es inválida entre clases.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ClassNotFoundException</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checked</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">El programa intenta cargar una clase por su nombre (String) pero no se encuentra dicho nombre.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FileNotFoundException</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checked</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fallo al intentar abrir o leer un archivo del sistema.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IllegalAccessException</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checked</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se intenta acceder o invocar un método pero el programa no tiene acceso a este.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IllegalArgumentException</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unchecked</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Un método recibe un argumento ilegal o inapropiado.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IndexOutOfBoundsException</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unchecked</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se intenta acceder a un índice inválio dentro de un string o array.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">InterruptedIOException</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checked</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Una operación de la clase IO de Java ha sido interrumpida por algún motivo.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NoClassDefFoundError</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fatal (Error)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Una clase disponible en tiempo de compilación no se encuentra en tiempo de ejecución.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NullPointerException</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unchecked</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se intenta acceder o invocar a un método en una referencia nula.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OutOfMemoryError</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fatal (Error)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">La máquina virtual de Java (JVM) se ha quedado sin memoria con la que trabajar.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">StackOverflowError</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fatal (Error)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">La pila de llamadas es demasiado larga, típicamente en una método recursivo infinito.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UnknownError</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fatal (Error)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Un error desconocido pero serio ha ocurrido en la máquina virtual de Java (JVM).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_throws">7.1. Throws</h3>
+<div class="paragraph">
+<p>La cláusula throws se utiliza en la declaración de un método para indicar que este puede lanzar una o más excepciones <em>checked</em>. De esta manera, la excepción(es) se propaga(n) al método que lo llama, y este es el que se encarga de manejarla(s).</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public void readFile(String path) throws IOException {
+    // Código para leer el archivo
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public void dataBaseOperation() throws SQLException, IOException {
+    FileReader fr = new FileReader(ruta);
+    // Código que puede lanzar ambas excepciones
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_try_catch">7.2. Try-catch</h3>
+<div class="paragraph">
+<p>El bloque try-catch se utiliza para manejar excepciones. El código que puede lanzar la excepción se coloca en el bloque <em>try</em>, y el manejo de la excepción en el bloque <em>catch</em>.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">try {
+    int resultado = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Error: División por cero");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>El bloque <em>catch</em> no se limita a una sola excepción, también puede contener múltiples.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">try {
+    File file = new File("archivo.txt");
+    FileReader fr = new FileReader(file);
+} catch (FileNotFoundException e) {
+    System.out.println("El archivo no existe");
+} catch (IOException e) {
+    System.out.println("Error de lectura");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">try {
+    File file = new File("archivo.txt");
+    FileReader fr = new FileReader(file);
+} catch (FileNotFoundException | IOException e) {
+    System.out.println("Error con el archivo");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Además, existe un tercer integrante en esta estructura, que es el <em>finally</em>. Este bloque se ejecuta ya sea que la excepción se lanze o no.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">try {
+    int resultado = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Error: División por cero");
+} finally {
+    System.out.println("Fin del programa")
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Y ya como extra, en la version 7 de Java se integró una función llamada "try with resources", el cual es una variación de todo lo que hemos visto, pero que acepta parámetros al comienzo del bloque.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">try (FileReader fr = new FileReader("archivo.txt")) { // El recurso (FileReader) se cerrará automáticamente
+    // Código para leer el archivo
+} catch (IOException e) {
+    System.out.println("Error: " + e.getMessage());
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-09-30 19:12:47 +0200
+Last updated 2024-10-03 14:16:29 +0200
 </div>
 </div>
 </body>

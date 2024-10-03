@@ -275,22 +275,16 @@ La bifurcación if-else es la más común. Se usa una declaración _if_, se pued
 Ejemplo de uso:
 [source, java]
 ----
-public class Ejemplo {
-    public static void main(String[] args) {
-        int a = 4;
-        int b = 7;
-        int c = -2
+int a = 4;
+int b = 7;
+int c = -2
 
-        if (a > b && a > c) {
-            System.out.println(a + " es el mayor");
-        } else if (b > c) {
-            System.out.println(b + " es el mayor");
-        } else {
-            System.out.println(c + " es el mayor");
-        }
-
-        // La salida de este programa es: "7 es el mayor"
-    }
+if (a > b && a > c) {
+    System.out.println(a + " es el mayor");
+} else if (b > c) {
+    System.out.println(b + " es el mayor");
+} else {
+    System.out.println(c + " es el mayor");
 }
 ----
 
@@ -300,38 +294,31 @@ La bifurcación switch-case es muy parecida a la if-else pero puede resultar má
 Ejemplo de uso:
 [source, java]
 ----
-public class Ejemplo {
-    public static void main(String[] args) {
-        int dia = 4;
-
-        switch (dia) {
-            case 1:
-                System.out.println("Lunes");
-            break;
-            case 2:
-                System.out.println("Martes");
-            break;
-            case 3:
-                System.out.println("Miércoles");
-            break;
-            case 4:
-                System.out.println("Jueves");
-            break;
-            case 5:
-                System.out.println("Viernes");
-            break;
-            case 6:
-                System.out.println("Sábado");
-            break;
-            case 7:
-                System.out.println("Domingo");
-            break;
-            default:
-                System.out.println("No existe este dia de la semana");
-        }
-
-        // La salida de este programa es: "Jueves"
-    }
+int dia = 4;
+switch (dia) {
+    case 1:
+        System.out.println("Lunes");
+    break;
+    case 2:
+        System.out.println("Martes");
+    break;
+    case 3:
+        System.out.println("Miércoles");
+    break;
+    case 4:
+        System.out.println("Jueves");
+    break;
+    case 5:
+        System.out.println("Viernes");
+    break;
+    case 6:
+        System.out.println("Sábado");
+    break;
+    case 7:
+        System.out.println("Domingo");
+    break;
+    default:
+        System.out.println("No existe este dia de la semana");
 }
 ----
 
@@ -341,15 +328,9 @@ El operador ternario es una simplificación de la bifurcación if-else para pode
 Ejemplo de uso:
 [source, java]
 ----
-public class Ejemplo {
-    public static void main(String[] args) {
-        int n = 6;
-        int salida = (n % 2 == 0) ? n + " es par" : n + " es impar";
-        System.out.println(salida);
-
-        // La salida de este programa es: "n es par"
-    }
-}
+int n = 6;
+int salida = (n % 2 == 0) ? n + " es par" : n + " es impar";
+System.out.println(salida);
 ----
 
 == Bucles
@@ -361,14 +342,8 @@ El bucle for es el más común. Se usa para repetir un bloque de código un núm
 Ejemplo de uso:
 [source, java]
 ----
-public class Ejemplo {
-    public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
-            System.out.print(i + " ");
-        }
-
-        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
-    }
+for (int i = 0; i < 10; i++) {
+    System.out.print(i + " ");
 }
 ----
 
@@ -378,16 +353,8 @@ El bucle for-each es una variación del bucle for. Se introdujo porque son mucha
 Ejemplo de uso:
 [source, java]
 ----
-public class Ejemplo {
-    public static void main(String[] args) {
-        int [] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-
-        for (int n : numeros) {
-            System.out.print(n + " ");
-        }
-
-        // La salida de este programa es: "1 2 3 4 5 6 7 8 9 10 "
-    }
+for (int n : numeros) {
+    System.out.print(n + " ");
 }
 ----
 
@@ -397,19 +364,13 @@ Al contrario que los dos anteriores, el bucle while no depende de un numero defi
 Ejemplo de uso:
 [source, java]
 ----
-public class Ejemplo {
-    public static void main(String[] args) {
-        boolean salir = false;
-        int contador = 0;
-        while (!salir) {
-            if (contador > 10) {
-                salir = true;
-            } else {
-                System.out.println(contador + " ");
-            }
-        }
-
-        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
+boolean salir = false;
+int contador = 0;
+while (!salir) {
+    if (contador > 10) {
+        salir = true;
+    } else {
+        System.out.println(contador + " ");
     }
 }
 ----
@@ -420,21 +381,15 @@ El bucle do-while es una variación del bucle while. En el caso del anterior buc
 Ejemplo de uso:
 [source, java]
 ----
-public class Ejemplo {
-    public static void main(String[] args) {
-        boolean salir = true;
-        int contador = 0;
-        do {
-            if (contador > 10) {
-                salir = true;
-            } else {
-                System.out.println(contador + " ");
-            }
-        } while (!salir);
-
-        // La salida de este programa es: "0 "
+boolean salir = true;
+int contador = 0;
+do {
+    if (contador > 10) {
+        salir = true;
+    } else {
+        System.out.println(contador + " ");
     }
-}
+} while (!salir);
 ----
 
 En el caso del siguiente ejemplo, la condición no se cumple de primeras, así que el bucle seguirá su curso como si se tratara de cualquier otro bucle.
@@ -442,21 +397,15 @@ En el caso del siguiente ejemplo, la condición no se cumple de primeras, así q
 Ejemplo de uso:
 [source, java]
 ----
-public class Ejemplo {
-    public static void main(String[] args) {
-        boolean salir = false;
-        int contador = 0;
-        do {
-            if (contador > 10) {
-                salir = true;
-            } else {
-                System.out.println(contador + " ");
-            }
-        } while (!salir);
-
-        // La salida de este programa es: "0 1 2 3 4 5 6 7 8 9 "
+boolean salir = false;
+int contador = 0;
+do {
+    if (contador > 10) {
+        salir = true;
+    } else {
+        System.out.println(contador + " ");
     }
-}
+} while (!salir);
 ----
 
 == Clase String
@@ -605,3 +554,150 @@ Como todas las clases, la clase String viene con un montón de métodos que nos 
 | "  Ejemplo ".trim()
 | "Ejemplo"
 |===
+
+== Excepciones
+Una excepción es la manera como Java nos avisa que ha habido un error durante la ejecución del programa, y se dividen en tres tipos distintos. Las excepciones _checked_ son comprobadas en tiempo de compilación y, por lo tanto, el compilador obliga a controlarlas con una cláusula _trhows_ o un bloque try-catch. Por el contrario, las excepciones _unchecked_ son las que no se comprueban en tiempo de compilación, por lo que no es obligatorio controlarlas. Por último, las excepciones _fatal_ son aquellas que causan que el programa se detenga completamente, sugiriendo que alguna parte del código es incorrecta y debe ser corregida de immediato. Estas son algunas de las excepciones más comunes.
+
+[options="header", cols="3"]
+|===
+| Nombre
+| Tipo
+| Descripción
+
+| ArithmeticException
+| Unchecked
+| Operación aritmética excepcional, por ejemplo división por cero.
+
+| ClassCastException
+| Unchecked
+| Una conversión (cast) es inválida entre clases.
+
+| ClassNotFoundException
+| Checked
+| El programa intenta cargar una clase por su nombre (String) pero no se encuentra dicho nombre.
+
+| FileNotFoundException
+| Checked
+| Fallo al intentar abrir o leer un archivo del sistema.
+
+| IllegalAccessException
+| Checked
+| Se intenta acceder o invocar un método pero el programa no tiene acceso a este.
+
+| IllegalArgumentException
+| Unchecked
+| Un método recibe un argumento ilegal o inapropiado.
+
+| IndexOutOfBoundsException
+| Unchecked
+| Se intenta acceder a un índice inválio dentro de un string o array.
+
+| InterruptedIOException
+| Checked
+| Una operación de la clase IO de Java ha sido interrumpida por algún motivo.
+
+| NoClassDefFoundError
+| Fatal (Error)
+| Una clase disponible en tiempo de compilación no se encuentra en tiempo de ejecución.
+
+| NullPointerException
+| Unchecked
+| Se intenta acceder o invocar a un método en una referencia nula.
+
+| OutOfMemoryError
+| Fatal (Error)
+| La máquina virtual de Java (JVM) se ha quedado sin memoria con la que trabajar.
+
+| StackOverflowError
+| Fatal (Error)
+| La pila de llamadas es demasiado larga, típicamente en una método recursivo infinito.
+
+| UnknownError
+| Fatal (Error)
+| Un error desconocido pero serio ha ocurrido en la máquina virtual de Java (JVM).
+|===
+
+=== Throws
+La cláusula throws se utiliza en la declaración de un método para indicar que este puede lanzar una o más excepciones _checked_. De esta manera, la excepción(es) se propaga(n) al método que lo llama, y este es el que se encarga de manejarla(s). 
+
+Ejemplo de uso:
+[source, java]
+----
+public void readFile(String path) throws IOException {
+    // Código para leer el archivo
+}
+----
+
+Ejemplo de uso:
+[source, java]
+----
+public void dataBaseOperation() throws SQLException, IOException {
+    FileReader fr = new FileReader(ruta);
+    // Código que puede lanzar ambas excepciones
+}
+----
+
+=== Try-catch
+El bloque try-catch se utiliza para manejar excepciones. El código que puede lanzar la excepción se coloca en el bloque _try_, y el manejo de la excepción en el bloque _catch_.
+
+Ejemplo de uso:
+[source, java]
+----
+try {
+    int resultado = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Error: División por cero");
+}
+----
+
+El bloque _catch_ no se limita a una sola excepción, también puede contener múltiples.
+
+Ejemplo de uso:
+[source, java]
+----
+try {
+    File file = new File("archivo.txt");
+    FileReader fr = new FileReader(file);
+} catch (FileNotFoundException e) {
+    System.out.println("El archivo no existe");
+} catch (IOException e) {
+    System.out.println("Error de lectura");
+}
+----
+
+Ejemplo de uso:
+[source, java]
+----
+try {
+    File file = new File("archivo.txt");
+    FileReader fr = new FileReader(file);
+} catch (FileNotFoundException | IOException e) {
+    System.out.println("Error con el archivo");
+}
+----
+
+Además, existe un tercer integrante en esta estructura, que es el _finally_. Este bloque se ejecuta ya sea que la excepción se lanze o no.
+
+Ejemplo de uso:
+[source, java]
+----
+try {
+    int resultado = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Error: División por cero");
+} finally {
+    System.out.println("Fin del programa")
+}
+----
+
+Y ya como extra, en la version 7 de Java se integró una función llamada "try with resources", el cual es una variación de todo lo que hemos visto, pero que acepta parámetros al comienzo del bloque.
+
+Ejemplo de uso:
+[source, java]
+----
+try (FileReader fr = new FileReader("archivo.txt")) { // El recurso (FileReader) se cerrará automáticamente
+    // Código para leer el archivo
+} catch (IOException e) {
+    System.out.println("Error: " + e.getMessage());
+}
+----
