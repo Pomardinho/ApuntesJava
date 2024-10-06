@@ -703,7 +703,7 @@ try (FileReader fr = new FileReader("archivo.txt")) { // El recurso (FileReader)
 ----
 
 == Arrays
-Los arrays almacenan múltiples valores del mismo tipo en una única variable. Su longitud es fija y se determina al instanciarlo. Cada valor recibe un índice (0-X) con el cual puede ser referenciado. En los ejemplos de se van a declarar e instanciar arrays de tipo entero (_int_), pero como se ha mencionado anteriormente, estos pueden ser de cualquier tipo primitivo, clase, objeto, etc.
+Los arrays almacenan múltiples valores del mismo tipo en una única variable. Su longitud es fija y se determina al instanciarlo. Cada valor recibe un índice (0-X) con el cual puede ser referenciado. En los ejemplos se van a declarar e instanciar arrays de tipo entero (_int_), pero como se ha mencionado anteriormente, estos pueden ser de cualquier tipo primitivo, clase, objeto, etc.
 
 Ejemplo de uso:
 [source, java]
@@ -712,7 +712,7 @@ int[] numeros; // Declaración del array, todavía no se ha instanciado
 numeros = new int[10] // Instanciación del array, en este caso 10 posiciones
 ----
 
-Estas dos lineas pueden ser simplificadas en una sin ningun problema. De igual manera, podemos instanciar el array especificando directamente sus valores y no solo su longitud.
+Estas dos lineas pueden ser simplificadas en una sin ningún problema. De igual manera, podemos instanciar el array especificando directamente sus valores y no solo su longitud.
 
 Ejemplo de uso:
 [source, java]
