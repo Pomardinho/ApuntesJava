@@ -466,7 +466,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_do_while">5.4. Do-while</a></li>
 </ul>
 </li>
-<li><a href="#_clase_string">6. Clase String</a>
+<li><a href="#_string">6. String</a>
 <ul class="sectlevel2">
 <li><a href="#_métodos_más_comunes">6.1. Métodos más comunes</a></li>
 </ul>
@@ -477,6 +477,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_try_catch">7.2. Try-catch</a></li>
 </ul>
 </li>
+<li><a href="#_arrays">8. Arrays</a></li>
 </ul>
 </div>
 </div>
@@ -1085,7 +1086,7 @@ do {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_clase_string">6. Clase String</h2>
+<h2 id="_string">6. String</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>La clase String pertenece a Java y <strong>NO</strong> es un tipo primitivo, al contrario del o que muchos piensan. Se podría comparar a un array de <em>char</em>. Esta clase siempre se construye usando comillas dobles (""). Para introducir ciertos carácteres hace falta escribirlos de una manera especial, son los denominados <em>carácteres de escape</em>.</p>
@@ -1483,10 +1484,63 @@ do {
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_arrays">8. Arrays</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Los arrays almacenan múltiples valores del mismo tipo en una única variable. Su longitud es fija y se determina al instanciarlo. Cada valor recibe un índice (0-X) con el cual puede ser referenciado. En los ejemplos de se van a declarar e instanciar arrays de tipo entero (<em>int</em>), pero como se ha mencionado anteriormente, estos pueden ser de cualquier tipo primitivo, clase, objeto, etc.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">int[] numeros; // Declaración del array, todavía no se ha instanciado
+numeros = new int[10] // Instanciación del array, en este caso 10 posiciones</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Estas dos lineas pueden ser simplificadas en una sin ningun problema. De igual manera, podemos instanciar el array especificando directamente sus valores y no solo su longitud.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">int[] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Hasta el momento solo hemos visto arrays unidimensionales, pero estos pueden contener tantas dimensiones como queramos. Hay que tener en cuenta que nuestro mundo tiene tres dimensiones, así que es raro encontrar casos que necesiten de arrays con más de tres dimensiones.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">int[][] numeros = new int[10][10] // Array de dos dimensiones con 10 valores en cada una
+int[][][] numeros2 = new int[10][10][10] // Array de tres dimensiones con 10 valores en cada una</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Para acabar, al igual que pasa con la clase String, podemos conocer su longitud usando <em>.length</em>. Además para acceder al valor de una de sus posiciones es tan fácil como escribir su índice. Es muy común recorrer todas las posiciones de un array con un bucle <em>for</em> o <em>for-each</em>, tal y como se explica en el apartado de bucles.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo de uso:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">int[] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+numeros.length // El array "numeros" tiene una longitud de 10
+numeros[2] // La posición 2 del array "numeros" contiene el valor 3</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-10-03 14:16:29 +0200
+Last updated 2024-10-06 22:00:15 +0200
 </div>
 </div>
 </body>

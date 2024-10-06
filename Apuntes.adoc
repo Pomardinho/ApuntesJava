@@ -408,7 +408,7 @@ do {
 } while (!salir);
 ----
 
-== Clase String
+== String
 La clase String pertenece a Java y *NO* es un tipo primitivo, al contrario del o que muchos piensan. Se podría comparar a un array de _char_. Esta clase siempre se construye usando comillas dobles (""). Para introducir ciertos carácteres hace falta escribirlos de una manera especial, son los denominados _carácteres de escape_.
 
 [options="header", cols="2"]
@@ -700,4 +700,41 @@ try (FileReader fr = new FileReader("archivo.txt")) { // El recurso (FileReader)
 } catch (IOException e) {
     System.out.println("Error: " + e.getMessage());
 }
+----
+
+== Arrays
+Los arrays almacenan múltiples valores del mismo tipo en una única variable. Su longitud es fija y se determina al instanciarlo. Cada valor recibe un índice (0-X) con el cual puede ser referenciado. En los ejemplos de se van a declarar e instanciar arrays de tipo entero (_int_), pero como se ha mencionado anteriormente, estos pueden ser de cualquier tipo primitivo, clase, objeto, etc.
+
+Ejemplo de uso:
+[source, java]
+----
+int[] numeros; // Declaración del array, todavía no se ha instanciado
+numeros = new int[10] // Instanciación del array, en este caso 10 posiciones
+----
+
+Estas dos lineas pueden ser simplificadas en una sin ningun problema. De igual manera, podemos instanciar el array especificando directamente sus valores y no solo su longitud.
+
+Ejemplo de uso:
+[source, java]
+----
+int[] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+----
+
+Hasta el momento solo hemos visto arrays unidimensionales, pero estos pueden contener tantas dimensiones como queramos. Hay que tener en cuenta que nuestro mundo tiene tres dimensiones, así que es raro encontrar casos que necesiten de arrays con más de tres dimensiones.
+
+Ejemplo de uso:
+[source, java]
+----
+int[][] numeros = new int[10][10] // Array de dos dimensiones con 10 valores en cada una
+int[][][] numeros2 = new int[10][10][10] // Array de tres dimensiones con 10 valores en cada una
+----
+
+Para acabar, al igual que pasa con la clase String, podemos conocer su longitud usando _.length_. Además para acceder al valor de una de sus posiciones es tan fácil como escribir su índice. Es muy común recorrer todas las posiciones de un array con un bucle _for_ o _for-each_, tal y como se explica en el apartado de bucles.
+
+Ejemplo de uso:
+[source, java]
+----
+int[] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+numeros.length // El array "numeros" tiene una longitud de 10
+numeros[2] // La posición 2 del array "numeros" contiene el valor 3
 ----
