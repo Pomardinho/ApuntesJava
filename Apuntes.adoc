@@ -524,6 +524,11 @@ Como todas las clases, la clase String viene con un montón de métodos que nos 
 | "ejemplo".replace("e", "2")
 | "2j2mplo"
 
+| split(String regex)
+| Separa el String principal usando el separador (regex) especificado y devuelve un array de substrings
+| "ejemplo ejemplo ejemplo".split(" ")
+| ["ejemplo", "ejemplo", "ejemplo"]
+
 | startsWith(String prefix)
 | Comprueba si el String empieza con el prefijo especificado.
 | "Ejemplo".startsWith("Ej")
