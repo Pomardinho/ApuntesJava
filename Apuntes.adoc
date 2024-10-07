@@ -709,7 +709,7 @@ Ejemplo de uso:
 [source, java]
 ----
 int[] numeros; // Declaración del array, todavía no se ha instanciado
-numeros = new int[10] // Instanciación del array, en este caso 10 posiciones
+numeros = new int[10]; // Instanciación del array, en este caso 10 posiciones
 ----
 
 Estas dos lineas pueden ser simplificadas en una sin ningún problema. De igual manera, podemos instanciar el array especificando directamente sus valores y no solo su longitud.
@@ -717,7 +717,7 @@ Estas dos lineas pueden ser simplificadas en una sin ningún problema. De igual 
 Ejemplo de uso:
 [source, java]
 ----
-int[] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+int[] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 ----
 
 Hasta el momento solo hemos visto arrays unidimensionales, pero estos pueden contener tantas dimensiones como queramos. Hay que tener en cuenta que nuestro mundo tiene tres dimensiones, así que es raro encontrar casos que necesiten de arrays con más de tres dimensiones.
@@ -725,8 +725,8 @@ Hasta el momento solo hemos visto arrays unidimensionales, pero estos pueden con
 Ejemplo de uso:
 [source, java]
 ----
-int[][] numeros = new int[10][10] // Array de dos dimensiones con 10 valores en cada una
-int[][][] numeros2 = new int[10][10][10] // Array de tres dimensiones con 10 valores en cada una
+int[][] numeros = new int[10][10]; // Array de dos dimensiones con 10 valores en cada una
+int[][][] numeros2 = new int[10][10][10]; // Array de tres dimensiones con 10 valores en cada una
 ----
 
 Para acabar, al igual que pasa con la clase String, podemos conocer su longitud usando _.length_. Además para acceder al valor de una de sus posiciones es tan fácil como escribir su índice. Es muy común recorrer todas las posiciones de un array con un bucle _for_ o _for-each_, tal y como se explica en el apartado de bucles.
@@ -734,7 +734,7 @@ Para acabar, al igual que pasa con la clase String, podemos conocer su longitud 
 Ejemplo de uso:
 [source, java]
 ----
-int[] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-numeros.length // El array "numeros" tiene una longitud de 10
-numeros[2] // La posición 2 del array "numeros" contiene el valor 3
+int[] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+numeros.length; // El array "numeros" tiene una longitud de 10
+numeros[2]; // La posición 2 del array "numeros" contiene el valor 3
 ----
